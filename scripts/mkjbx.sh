@@ -9,37 +9,31 @@
 clear
 echo "Setting this machine up as a Jukebox..."
 echo
-echo
-echo
 echo "~ script called with ------->  ${@}     "
-echo "~ \$1 ---------------------->  $1       "
+echo "~ ISAUDIO ------------------>  $1       "
 echo "~ \$2 ---------------------->  $2       "
 echo "~ path to this script ------>  ${0}     "
 echo "~ parent path -------------->  ${0%/*}  "
 echo "~ this script -------------->  ${0##*/} "
 echo
 echo
-echo WARNING: This script will:
-echo    - Create new users with sudo permission and delete the default 'pi' user
-echo    - Change the hostname of the machine
+if [[ISAUDIO]] todo
 echo
-read -p "Proceed with Jukebox setup? " -n 1 -r
+echo
+echo "WARNING: This will make significant changes to the system."
+echo
+read -p "Proceed with Jukebox setup? (Y/N) " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
 
   #Arguments to variables
-  TASK=$1
+  ISAUDIO=$1
   HOSTNAME=$2
 
   #Change this file's owner to root:
   echo "Change this file's owner to root:"
   sudo chown root:root ${0}
-  echo
-
-  #Make this file executable -before executing this file :p
-  echo "Make this file executable:"
-  sudo chmod 700 ${0}
   echo
 
   #Add system user 'juke'
@@ -79,7 +73,7 @@ then
   #Reboot
   echo
   echo
-  read -s -n 1 -p "Press any key to reboot"
+  read -s -n 1 -p "Press any key to reboot..."
   echo
   sudo -u juke reboot
 

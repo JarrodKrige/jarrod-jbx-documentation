@@ -37,7 +37,7 @@ then
   sudo chown root:root ${0}
   echo
 
-  #Make this file executable
+  #Make this file executable -before executing this file :p
   echo "Make this file executable:"
   sudo chmod 700 ${0}
   echo
@@ -86,6 +86,10 @@ then
   #TODO:
   #Remove user pi
   #Edit pi config for default user and to stop UI mode
+  #Set time
+  #Set static IP
+  #Setup Pi-DigiAMP+ for Audio Pi
+  #Setup Unicorn Hat for Visusal Pi
 
 fi
 

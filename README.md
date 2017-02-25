@@ -20,6 +20,12 @@ https://github.com/pimusicbox/pimusicbox
 A web client implementation of Mopidy called Mopify
 https://github.com/dirkgroenen/mopidy-mopify
 
+Audio visualisers:
+Python: http://www.tomarcher.co.uk/2016/10/28/raspberry-pi-audio-visualiser/
+        https://github.com/Tom-Archer/audio-visualiser
+C: https://github.com/daniel-j/unicorn-fft
+
+Misc: https://bitbucket.org/togiles/lightshowpi/src/94e76f67cb9df59990acfe9a4e7eb4a443d1668c/py/examples/play_message.py?at=master&fileviewer=file-view-default
 
 Other considerations
 ====================

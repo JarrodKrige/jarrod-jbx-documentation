@@ -36,6 +36,11 @@ then
   sudo chown root:root ${0}
   echo
 
+  #Update the Pi
+  echo "Update the Pi:"
+  sudo apt-get-update
+  echo
+
   #Add system user 'juke'
   echo "Add system user 'juke':"
   sudo adduser --quiet --disabled-password --shell /bin/bash --home /home/juke --gecos "User" juke
@@ -52,7 +57,7 @@ then
   sudo -u juke bash -c 'echo "juke ALL=(ALL) NOPASSWD: ${0}" | (EDITOR="tee -a" visudo)'
   echo
 
-  #Add admin user 'jarrod'
+  #Add admin user 'jarrod' -TODO: Rather use this: http://unixetc.co.uk/2016/01/07/how-to-rename-the-default-raspberry-pi-user/
   echo "Add admin user 'jarrod':"
   sudo -u juke adduser --quiet --disabled-password --shell /bin/bash --home /home/jarrod --gecos "User" jarrod
   sudo -u juke bash -c 'echo "jarrod:jukebox10110" | chpasswd'
@@ -84,6 +89,7 @@ then
   #Set static IP
   #Setup Pi-DigiAMP+ for Audio Pi
   #Setup Unicorn Hat for Visusal Pi
+  #Install/update dependencies including python, c compiler
 
 fi
 

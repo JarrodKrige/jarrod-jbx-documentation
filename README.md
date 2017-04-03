@@ -46,6 +46,8 @@ https://github.com/mikebrady/shairport-sync
 - Should I cluster the 2 Pi's and if so Docker Swarm?
 - what about a cloud api to serve all data which calls to pi to only invoke play music function. this api integrate direct to spotify api. You can play sample direct from spotify api to client app. client can select play, cloud api enrols song in playlist. cloud api manages playlist. Pi only continues to play the playlist, perhaps requiring a poll or a push from cloud api.
 
+https://docs.api.ai/docs/tts  - Text to speech service
+
 Hardware config
 ===============
 
